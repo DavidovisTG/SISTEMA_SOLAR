@@ -1,0 +1,87 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void GameController_Start_mD0C79B8B5B5D8EDC88F7F2F88B5954B1342198EF (void);
+extern void GameController_UpdateUI_mF3C532BD217B7CDDB55F2C61C032A1306B38ECDA (void);
+extern void GameController_OnImageTargetFound_m6710F165679E1A901B0C9A2201FE182163E0BA4B (void);
+extern void GameController_GenerateNextTarget_m94E467D3ACBC4C64C1CDB83ADE1327BBE5654BAD (void);
+extern void GameController_GameOver_m79F2AC84C02E922C0A041133D6CF029886353C66 (void);
+extern void GameController_Update_m5E36D1D6999A7510DFDFBF6805CF9E9CB50F0962 (void);
+extern void GameController__ctor_mB6369F6C5357D5984325D613D589EDA60818CBE9 (void);
+extern void ImageTargetHandler_Start_m7007058C70B1EE337B3CAF938C58C519104A13A6 (void);
+extern void ImageTargetHandler_Update_mD30F40E62E24C8006AAA6B42E0E2549FFB02A55A (void);
+extern void ImageTargetHandler_OnTargetStatusChanged_m2E63FFCC0ECA0A61D041565519952DFD9FBE7373 (void);
+extern void ImageTargetHandler__ctor_m5A4A7FC125ED90A209E4F9A31C691B103EAA23A0 (void);
+extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
+extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
+extern void VuforiaLicense_GetLicenseKey_m796D51E5EF1C53F3D62BA4EA8806AC1FB1A5E3C4 (void);
+extern void VuforiaLicense__ctor_m094B92B3323DFFD79ADB696474D5D158C95E291B (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+static Il2CppMethodPointer s_methodPointers[17] = 
+{
+	GameController_Start_mD0C79B8B5B5D8EDC88F7F2F88B5954B1342198EF,
+	GameController_UpdateUI_mF3C532BD217B7CDDB55F2C61C032A1306B38ECDA,
+	GameController_OnImageTargetFound_m6710F165679E1A901B0C9A2201FE182163E0BA4B,
+	GameController_GenerateNextTarget_m94E467D3ACBC4C64C1CDB83ADE1327BBE5654BAD,
+	GameController_GameOver_m79F2AC84C02E922C0A041133D6CF029886353C66,
+	GameController_Update_m5E36D1D6999A7510DFDFBF6805CF9E9CB50F0962,
+	GameController__ctor_mB6369F6C5357D5984325D613D589EDA60818CBE9,
+	ImageTargetHandler_Start_m7007058C70B1EE337B3CAF938C58C519104A13A6,
+	ImageTargetHandler_Update_mD30F40E62E24C8006AAA6B42E0E2549FFB02A55A,
+	ImageTargetHandler_OnTargetStatusChanged_m2E63FFCC0ECA0A61D041565519952DFD9FBE7373,
+	ImageTargetHandler__ctor_m5A4A7FC125ED90A209E4F9A31C691B103EAA23A0,
+	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
+	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
+	VuforiaLicense_GetLicenseKey_m796D51E5EF1C53F3D62BA4EA8806AC1FB1A5E3C4,
+	VuforiaLicense__ctor_m094B92B3323DFFD79ADB696474D5D158C95E291B,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+};
+static const int32_t s_InvokerIndices[17] = 
+{
+	17133,
+	17133,
+	13047,
+	17133,
+	17133,
+	17133,
+	17133,
+	17133,
+	17133,
+	6680,
+	17133,
+	17133,
+	17133,
+	28724,
+	17133,
+	28865,
+	17133,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	17,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
