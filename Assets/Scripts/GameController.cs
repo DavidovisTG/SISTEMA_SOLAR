@@ -1,21 +1,36 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController Instance;
+    public static MenuManager MenuManager;
 
+    public TextMeshProUGUI livesText;
+    public TextMeshProUGUI targetNameSuperText;
     public TextMeshProUGUI targetNameText;
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI livesText;
 
-    private List<string> targetList = new List<string>() { "Jupiter", "" };
+    private List<string> targetList = new List<string>() { "Sol", "Mercurio", "Venus", "Tierra", "Luna", "Marte", "JÃºpiter", "Saturno", "Urano", "Neptuno", "Pluto" };
 
     private string targetToFind;
     private int lives = 3;
 
     private int score = 0;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,9 +41,9 @@ public class GameController : MonoBehaviour
 
     void UpdateUI()
     {
-        targetNameText.text = "Busca... " + targetToFind;
-        livesText.text = "Vidas: " + lives;
-        scoreText.text = "Puntuación: " + score;
+        targetNameText.text = "" + targetToFind;
+        livesText.text = "" + lives;
+        scoreText.text = "" + score.ToString("000000");
     }
 
     public void OnImageTargetFound(string targetFound)
@@ -61,12 +76,11 @@ public class GameController : MonoBehaviour
 
     void GameOver()
     {
-        targetNameText.text = "GAME OVER";
+        targetNameText.text = "FIN DE LA PARTIDA";
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ReturnToMainMenu()
     {
-        
+        MenuManager.Instance.MainMenuScreen();
     }
 }

@@ -1,18 +1,43 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void PlayGame()
+    [SerializeField] GameObject mainMenu;
+    [SerializeField] GameObject howToPlayMenu;
+
+    public static MenuManager Instance;
+
+    public void MainMenuScreen()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void PlayGameScene()
+    {
+        SceneManager.LoadScene("GameScene");
+        Debug.Log("PLAY GAME");
+    }
+
+    public void HowToPlayScreen()
+    {
+        Debug.Log("HOW TO PLAY GAME");
+        howToPlayMenu.SetActive(true);
+        mainMenu.SetActive(false);
     }
 
     // Update is called once per frame
-    void QuitGame()
+    public void QuitGame()
     {
         Debug.Log("Salir del juego.");
-        Application.Quit(); //Cierra el programa en Android
+
+//Directivas (Exclusin de código en tiempo de compilación)
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; 
+#else
+    Application.Quit();
+#endif
+
     }
 }
