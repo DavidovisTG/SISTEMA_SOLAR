@@ -9,6 +9,21 @@ public class MenuManager : MonoBehaviour
 
     public static MenuManager Instance;
 
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Debug.Log("destroy menu");
+            Destroy(Instance.gameObject);
+            Instance = null;
+        }    
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        DontDestroyOnLoad(Instance.gameObject);
+    }
+
     public void MainMenuScreen()
     {
         SceneManager.LoadScene("MainMenuScene");
@@ -26,13 +41,19 @@ public class MenuManager : MonoBehaviour
         howToPlayMenu.SetActive(true);
         mainMenu.SetActive(false);
     }
+    public void ExitHTPScreen()
+    {
+        Debug.Log("EXIT HTP SCREEN");
+        howToPlayMenu.SetActive(false);
+        mainMenu.SetActive(true);
+    }
 
     // Update is called once per frame
     public void QuitGame()
     {
         Debug.Log("Salir del juego.");
 
-//Directivas (Exclusin de código en tiempo de compilación)
+//Directivas (Exclusión de código en tiempo de compilación)
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false; 
 #else

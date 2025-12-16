@@ -1,8 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -24,39 +22,39 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null)
+        {
+            Debug.Log("destroy game control");
+            Destroy(gameObject);
+            Instance = null;
+        }
         if (Instance == null)
         {
-            DontDestroyOnLoad(gameObject);
             Instance = this;
         }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-            Instance = this;
-        }
-        uiElements = UIDynamicElements.Instance;
-        menuManager = MenuManager.Instance;
+        DontDestroyOnLoad(gameObject);
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        uiElements = UIDynamicElements.Instance;
+        menuManager = MenuManager.Instance;
         HideAllUI();
-        //BeginGame();
+        StartCoroutine(BeginGame());
 
 
         //Timer.Instance.SetSeconds(timeInSeconds);
 
+        
+    }
+    IEnumerator BeginGame()
+    {
+        yield return uiElements.startAnimation();
         ShowAllUI();
         GenerateNextTarget();
         UpdateUI();
-    }
-
-    
-
-    void BeginGame()
-    {
-        uiElements.startAnimation();
     }
     void ShowAllUI()
     {
@@ -77,7 +75,7 @@ public class GameController : MonoBehaviour
     public void OnImageTargetFound(string targetFound)
     {
         //DEBUGGING
-        uiElements.ScoreNumberTextChange(targetFound);
+        uiElements.TargetSupertextChange(targetFound);
 
         if (targetFound.Equals(targetToFind))
         {

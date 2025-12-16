@@ -25,6 +25,11 @@ public class Timer : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        timerText.text = timeInSeconds.ToString("00.00", CultureInfo.InvariantCulture);
+    }
+
     public void RunTimer()
     {
         running = true;

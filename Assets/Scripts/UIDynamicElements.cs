@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -6,7 +7,8 @@ using UnityEngine.UI;
 public class UIDynamicElements : MonoBehaviour
 {
     public static UIDynamicElements Instance;
-    [SerializeField] GameObject UIPanel;
+
+    private GameObject UIPanel;
 
     [SerializeField] TextMeshProUGUI livesTextComponent;
     [SerializeField] TextMeshProUGUI targetNameTextComponent;
@@ -20,28 +22,36 @@ public class UIDynamicElements : MonoBehaviour
 
 
 
-    public void Awake()
+    private void Awake()
     {
+        if (Instance != null)
+        {
+            Debug.Log("destroy user interface");
+            Destroy(Instance.gameObject);
+            Instance = null;
+        }    
         if (Instance == null)
         {
-            DontDestroyOnLoad(gameObject);
             Instance = this;
         }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-            Instance = this;
-        }
+        DontDestroyOnLoad(Instance.gameObject);
+
+
+        UIPanel = transform.GetChild(0).gameObject;
         initialDynamicUIBoxHeight = dynamicUIBox.GetComponent<RectTransform>().sizeDelta.y;
-        
+    }
+
+    private void Start()
+    {
+
     }
 
 
-
     ////////UI ANIMATION
-    public void startAnimation()
+    public IEnumerator startAnimation()
     {
-        StartCoroutine(StartCountdown(3));
+        dynamicUIBox.SetActive(true);
+        yield return StartCoroutine(StartCountdown(3));
     }
 
     private IEnumerator StartCountdown(int seconds)
@@ -49,13 +59,13 @@ public class UIDynamicElements : MonoBehaviour
         RectTransform TR = dynamicUIBox.GetComponent<RectTransform>();
         TextMeshProUGUI TMPUI = dynamicUIBox.GetComponentInChildren<TextMeshProUGUI>();
 
-        for (int i = seconds; i >= 0; i--)
+        for (int i = seconds; i > 0; i--)
         {
             TMPUI.text = ""+i;
             yield return StartCoroutine(DynamicBoxHeightAnimate(initialDynamicUIBoxHeight));
         }
 
-        TMPUI.text = "SE ACABO.";
+        TMPUI.text = "¡Ya!";
         TR.sizeDelta = new Vector2(TR.sizeDelta.x, initialDynamicUIBoxHeight);
     }
 
@@ -93,7 +103,7 @@ public class UIDynamicElements : MonoBehaviour
 
     public void LivesNumberTextChange(string text)
     {
-        livesTextComponent.GetComponentInChildren<TextMeshProUGUI>().text = text;
+        livesTextComponent.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = text;
     }
     public void TargetSupertextChange(string superText)
     {
@@ -101,11 +111,11 @@ public class UIDynamicElements : MonoBehaviour
     }
     public void TargetNameTextChange(string targetName) 
     {
-        targetNameTextComponent.GetComponentInChildren<TextMeshProUGUI>().text = targetName;
+        targetNameTextComponent.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = targetName;
     }
     public void ScoreNumberTextChange(string scoreText)
     {
-        scoreTextComponent.GetComponentInChildren<TextMeshProUGUI>().text = scoreText;
+        scoreTextComponent.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = scoreText;
     }
 
     public GameObject ReturnUIPanel()
@@ -117,11 +127,17 @@ public class UIDynamicElements : MonoBehaviour
 
     public void HideAllUI()
     {
-        UIPanel.SetActive(false);
+        for (int c = 0; c < UIPanel.transform.childCount; c++)
+        {
+            UIPanel.transform.GetChild(c).gameObject.SetActive(false);
+        }
     }
     public void ShowAllUI()
     {
-        UIPanel.SetActive(true);
+        for (int c = 0; c < UIPanel.transform.childCount; c++)
+        {
+            UIPanel.transform.GetChild(c).gameObject.SetActive(true);
+        }
     }
 
     public void ShowLives()
