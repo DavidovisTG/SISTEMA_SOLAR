@@ -12,6 +12,7 @@ public class UIDynamicElements : MonoBehaviour
     [SerializeField] TextMeshProUGUI targetNameTextComponent;
     [SerializeField] TextMeshProUGUI scoreTextComponent;
     [SerializeField] Button backToMenuButtonComponent;
+    [SerializeField] Timer timer;
     
     [SerializeField] GameObject dynamicUIBox;
 
@@ -48,7 +49,12 @@ public class UIDynamicElements : MonoBehaviour
 
         TMPUI.text = "¡Ya!";
         TR.sizeDelta = new Vector2(TR.sizeDelta.x, initialDynamicUIBoxHeight);
+
+        StartCoroutine(DelayedTextHide(TMPUI, 0.7F));
+        timer.Run();
     }
+
+    
 
     private IEnumerator DynamicBoxHeightAnimate(float height)
     {
@@ -80,6 +86,12 @@ public class UIDynamicElements : MonoBehaviour
     }
     ////////
 
+    private IEnumerator DelayedTextHide(TextMeshProUGUI tMPUI, float seconds)
+    {
+        yield return new WaitForSecondsRealtime(seconds);
+        tMPUI.gameObject.SetActive(false);
+    }
+
 
 
     public void LivesNumberTextChange(string text)
@@ -99,31 +111,20 @@ public class UIDynamicElements : MonoBehaviour
         scoreTextComponent.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = scoreText;
     }
 
-    public GameObject ReturnUIPanel()
-    {
-        return UIPanel;
-    }
 
 
-
-    public void HideAllUI()
+    public void AllUIVisible(bool visible)
     {
         for (int c = 0; c < UIPanel.transform.childCount; c++)
         {
-            UIPanel.transform.GetChild(c).gameObject.SetActive(false);
-        }
-    }
-    public void ShowAllUI()
-    {
-        for (int c = 0; c < UIPanel.transform.childCount; c++)
-        {
-            UIPanel.transform.GetChild(c).gameObject.SetActive(true);
+            UIPanel.transform.GetChild(c).gameObject.SetActive(visible);
         }
     }
 
-    public void ShowLives()
+
+    internal void SetTimer(float timerTimeInSeconds)
     {
-        livesTextComponent.gameObject.SetActive(false);
+        timer.SetSeconds(timerTimeInSeconds);
     }
 
     public void BackToMainMenu()
@@ -137,5 +138,12 @@ public class UIDynamicElements : MonoBehaviour
         
     }
 
-    
+    public void StopTimer()
+    {
+        timer.Stop();
+    }
+    public void RunTimer()
+    {
+        timer.Run();
+    }
 }

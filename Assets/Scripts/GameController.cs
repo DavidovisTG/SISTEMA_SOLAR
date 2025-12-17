@@ -12,28 +12,19 @@ public class GameController : MonoBehaviour
 
     //
     private List<string> targetList = new List<string>() { "Sol", "Mercurio", "Venus", "Tierra", "Luna", "Marte", "Júpiter", "Saturno", "Urano", "Neptuno", "Pluto" };
+    private List<string> seenTargetsList = new List<string>();
 
     private string targetToFind;
     private int lives = 3;
-    private float timeInSeconds = 60;
+    private float timerTimeInSeconds = 60;
     private float targetDefaultValue = 10000;
     private float targetCurrentValue;
     private int score = 0;
 
+    private bool gameOver = false;
+
     private void Awake()
     {
-        //if (Instance != null)
-        //{
-        //    Debug.Log("destroy game control");
-        //    Destroy(gameObject);
-        //    Instance = null;
-        //}
-        //if (Instance == null)
-        //{
-        //    Instance = this;
-        //}
-        //DontDestroyOnLoad(gameObject);
-
         if (Instance != null)
         {
             Destroy(gameObject);
@@ -60,10 +51,8 @@ public class GameController : MonoBehaviour
         if (scene.name != "GameScene") return;
         Debug.LogError("PASA POR AQUI");
         uiElements = FindFirstObjectByType<UIDynamicElements>();
-        HideAllUI();
+        uiElements.AllUIVisible(false);
         StartCoroutine(BeginGame());
-
-        //Timer.Instance.SetSeconds(timeInSeconds);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -74,18 +63,13 @@ public class GameController : MonoBehaviour
     IEnumerator BeginGame()
     {
         yield return uiElements.startAnimation();
-        ShowAllUI();
+        uiElements.AllUIVisible(true);
+
+        uiElements.SetTimer(timerTimeInSeconds);
         GenerateNextTarget();
         UpdateUI();
     }
-    void ShowAllUI()
-    {
-        uiElements.ShowAllUI();
-    }
-    void HideAllUI()
-    {
-        uiElements.HideAllUI();
-    }
+    
     void UpdateUI()
     {
         uiElements.TargetNameTextChange("" + targetToFind);
@@ -98,18 +82,21 @@ public class GameController : MonoBehaviour
     {
         //DEBUGGING
         uiElements.TargetSupertextChange(targetFound);
+        //
 
-        if (targetFound.Equals(targetToFind))
-        {
-            //Correct answer
-            score += 100;
-            GenerateNextTarget();
-        } else
-        {
-            lives--;
-            if (lives == 0)
+        if (!gameOver) { 
+            if (targetFound.Equals(targetToFind))
             {
-                GameOver();
+                //Correct answer
+                score += 100;
+                GenerateNextTarget();
+            } else
+            {
+                lives--;
+                if (lives == 0)
+                {
+                    GameOver();
+                }
             }
         }
 
@@ -126,6 +113,8 @@ public class GameController : MonoBehaviour
 
     void GameOver()
     {
+        gameOver = true;
+        uiElements.StopTimer();
         uiElements.TargetSupertextChange("");
         uiElements.TargetNameTextChange("FIN DE LA PARTIDA");
     }
@@ -133,5 +122,10 @@ public class GameController : MonoBehaviour
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void TimerEnded()
+    {
+        GameOver();
     }
 }

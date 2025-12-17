@@ -1864,6 +1864,7 @@ MonoBehaviour:
   targetNameTextComponent: {fileID: 138642471}
   scoreTextComponent: {fileID: 1218606311}
   backToMenuButtonComponent: {fileID: 1508018422}
+  timer: {fileID: 844700066}
   dynamicUIBox: {fileID: 1868721463}
 --- !u!1 &732378955
 GameObject:
@@ -2368,6 +2369,7 @@ GameObject:
   - component: {fileID: 844700063}
   - component: {fileID: 844700065}
   - component: {fileID: 844700064}
+  - component: {fileID: 844700066}
   m_Layer: 5
   m_Name: TIMER
   m_TagString: Untagged
@@ -2493,6 +2495,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844700062}
   m_CullTransparentMesh: 1
+--- !u!114 &844700066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844700062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4f2caf672eb114e83b46ba9430b195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
+  running: 0
+  active: 0
+  timeInSeconds: 0
 --- !u!1001 &944832653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3777,7 +3794,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1608024036}
   - component: {fileID: 1608024035}
-  - component: {fileID: 1608024037}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -3812,21 +3828,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1608024037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608024034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da4f2caf672eb114e83b46ba9430b195, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Timer
-  timerText: {fileID: 844700064}
-  running: 0
-  timeInSeconds: 30
 --- !u!1 &1718123425
 GameObject:
   m_ObjectHideFlags: 0
