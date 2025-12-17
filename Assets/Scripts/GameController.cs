@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -8,7 +9,6 @@ public class GameController : MonoBehaviour
 
     //CONVENIENCE VARIABLES
     UIDynamicElements uiElements;
-    MenuManager menuManager;
 
     //
     private List<string> targetList = new List<string>() { "Sol", "Mercurio", "Venus", "Tierra", "Luna", "Marte", "Júpiter", "Saturno", "Urano", "Neptuno", "Pluto" };
@@ -22,31 +22,53 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
+        //if (Instance != null)
+        //{
+        //    Debug.Log("destroy game control");
+        //    Destroy(gameObject);
+        //    Instance = null;
+        //}
+        //if (Instance == null)
+        //{
+        //    Instance = this;
+        //}
+        //DontDestroyOnLoad(gameObject);
+
         if (Instance != null)
         {
-            Debug.Log("destroy game control");
             Destroy(gameObject);
-            Instance = null;
+            return;
         }
-        if (Instance == null)
-        {
-            Instance = this;
-        }
+
+        Instance = this;
         DontDestroyOnLoad(gameObject);
 
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name != "GameScene") return;
+        Debug.LogError("PASA POR AQUI");
+        uiElements = FindFirstObjectByType<UIDynamicElements>();
+        HideAllUI();
+        StartCoroutine(BeginGame());
+
+        //Timer.Instance.SetSeconds(timeInSeconds);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        uiElements = UIDynamicElements.Instance;
-        menuManager = MenuManager.Instance;
-        HideAllUI();
-        StartCoroutine(BeginGame());
-
-
-        //Timer.Instance.SetSeconds(timeInSeconds);
-
         
     }
     IEnumerator BeginGame()
@@ -110,6 +132,6 @@ public class GameController : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        menuManager.MainMenuScreen();
+        SceneManager.LoadScene("MainMenuScene");
     }
 }

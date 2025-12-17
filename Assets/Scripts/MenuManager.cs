@@ -11,17 +11,7 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null)
-        {
-            Debug.Log("destroy menu");
-            Destroy(Instance.gameObject);
-            Instance = null;
-        }    
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        DontDestroyOnLoad(Instance.gameObject);
+        
     }
 
     public void MainMenuScreen()

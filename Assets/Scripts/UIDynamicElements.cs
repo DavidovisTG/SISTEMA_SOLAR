@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class UIDynamicElements : MonoBehaviour
 {
-    public static UIDynamicElements Instance;
-
     private GameObject UIPanel;
 
     [SerializeField] TextMeshProUGUI livesTextComponent;
@@ -20,32 +18,15 @@ public class UIDynamicElements : MonoBehaviour
     //OTRAS PROPIEDADES: VALORES POR DEFECTO
     private float initialDynamicUIBoxHeight;
 
-
-
     private void Awake()
     {
-        if (Instance != null)
-        {
-            Debug.Log("destroy user interface");
-            Destroy(Instance.gameObject);
-            Instance = null;
-        }    
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        DontDestroyOnLoad(Instance.gameObject);
-
-
         UIPanel = transform.GetChild(0).gameObject;
         initialDynamicUIBoxHeight = dynamicUIBox.GetComponent<RectTransform>().sizeDelta.y;
     }
-
     private void Start()
     {
-
+        
     }
-
 
     ////////UI ANIMATION
     public IEnumerator startAnimation()
@@ -145,6 +126,10 @@ public class UIDynamicElements : MonoBehaviour
         livesTextComponent.gameObject.SetActive(false);
     }
 
+    public void BackToMainMenu()
+    {
+        GameController.Instance.ReturnToMainMenu();
+    }
 
     // Update is called once per frame
     void Update()
