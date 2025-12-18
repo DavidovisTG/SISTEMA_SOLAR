@@ -14,12 +14,12 @@ public class GameController : MonoBehaviour
     private List<string> targetList = new List<string>() { "Sol", "Mercurio", "Venus", "Tierra", "Luna", "Marte", "Júpiter", "Saturno", "Urano", "Neptuno", "Pluto" };
     private List<string> seenTargetsList = new List<string>();
 
-    private string targetToFind;
-    private int lives = 3;
-    private float timerTimeInSeconds = 60;
-    private float targetDefaultValue = 10000;
-    private float targetCurrentValue;
-    private int score = 0;
+    [SerializeField] private string targetToFind;
+    [SerializeField] private int lives = 3;
+    [SerializeField] private float timerTimeInSeconds = 60;
+    [SerializeField] private float targetDefaultValue = 10000;
+    [SerializeField] private float targetCurrentValue;
+    [SerializeField] private int score = 0;
 
     private bool gameOver = false;
 
@@ -59,6 +59,10 @@ public class GameController : MonoBehaviour
     void Start()
     {
         
+    }
+    private void Update()
+    {
+        UpdateUI();
     }
     IEnumerator BeginGame()
     {

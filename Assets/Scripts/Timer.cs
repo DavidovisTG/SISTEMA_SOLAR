@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using System.Globalization;
-using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 
@@ -13,6 +11,8 @@ public class Timer : MonoBehaviour
     [SerializeField] bool active = false;
     [SerializeField] float timeInSeconds;
 
+    Coroutine textAnimation;
+
     private void Awake()
     {
         timerText = GetComponent<TextMeshProUGUI>();
@@ -21,16 +21,22 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        
+
     }
 
     public void Run()
     {
+        timerText.color = Color.white;
         running = true;
     }
     public void Stop()
     {
-        running = false; 
+        if (textAnimation != null)
+        {
+            StopCoroutine(textAnimation);
+            textAnimation = null;
+        }
+        running = false;
     }
 
     public void SetSeconds(float seconds)
@@ -45,7 +51,7 @@ public class Timer : MonoBehaviour
         {
             float oldTime = timeInSeconds;
             timeInSeconds -= Time.deltaTime;
-            
+
             if (timeInSeconds <= 0)
             {
                 Stop();
@@ -60,20 +66,31 @@ public class Timer : MonoBehaviour
             {
                 if (((int)oldTime) > ((int)timeInSeconds))
                 {
-                    StartCoroutine(MakeTimerPing(10 - ((int)timeInSeconds)));
+                    if (textAnimation != null) StopCoroutine(textAnimation);
+                    textAnimation = StartCoroutine(MakeTimerPing(10 - ((int)timeInSeconds)));
                 }
             }
-
-            
+        }
+        else
+        {
+            if (textAnimation != null)
+            {
+                StopCoroutine(textAnimation);
+                textAnimation = null;
+            }
         }
     }
 
     IEnumerator MakeTimerPing(int timesPerSecond)
     {
-        for (int i = 0; i < timesPerSecond; i++)
+        float wait = 1F / timesPerSecond;
+        while (true)
         {
-            StartCoroutine(TimerTextColorPing(Color.red));
-            yield return new WaitForSecondsRealtime(1F/timesPerSecond);
+            timerText.color = Color.red;
+            yield return new WaitForSecondsRealtime(0.05F);
+            timerText.color = Color.white;
+
+            yield return new WaitForSecondsRealtime(wait - 0.05F - Time.deltaTime);
         }
     }
 

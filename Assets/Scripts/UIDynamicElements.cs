@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -13,7 +12,7 @@ public class UIDynamicElements : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreTextComponent;
     [SerializeField] Button backToMenuButtonComponent;
     [SerializeField] Timer timer;
-    
+
     [SerializeField] GameObject dynamicUIBox;
 
     //OTRAS PROPIEDADES: VALORES POR DEFECTO
@@ -26,7 +25,7 @@ public class UIDynamicElements : MonoBehaviour
     }
     private void Start()
     {
-        
+
     }
 
     ////////UI ANIMATION
@@ -43,7 +42,7 @@ public class UIDynamicElements : MonoBehaviour
 
         for (int i = seconds; i > 0; i--)
         {
-            TMPUI.text = ""+i;
+            TMPUI.text = "" + i;
             yield return StartCoroutine(DynamicBoxHeightAnimate(initialDynamicUIBoxHeight));
         }
 
@@ -54,7 +53,7 @@ public class UIDynamicElements : MonoBehaviour
         timer.Run();
     }
 
-    
+
 
     private IEnumerator DynamicBoxHeightAnimate(float height)
     {
@@ -62,16 +61,16 @@ public class UIDynamicElements : MonoBehaviour
         float duration = 0.20f;
 
         float t = 0f;
-        
+
         while (t < duration)
         {
             t += Time.deltaTime;
-            float h = Mathf.Lerp( 0f, height, t / duration);
+            float h = Mathf.Lerp(0f, height, t / duration);
             box.sizeDelta = new Vector2(box.sizeDelta.x, h);
             yield return null; //PARECE INNECESARIO; SI SE BORRA NO ACTUALIZA FRAME
         }
 
-        yield return new WaitForSecondsRealtime(1f - (duration*3)-Time.deltaTime);
+        yield return new WaitForSecondsRealtime(1f - (duration * 3) - Time.deltaTime);
 
         t = 0f;
         while (t < duration)
@@ -82,7 +81,7 @@ public class UIDynamicElements : MonoBehaviour
             yield return null; //PARECE INNECESARIO; SI SE BORRA NO ACTUALIZA FRAME
         }
 
-        yield return new WaitForSecondsRealtime(duration-Time.deltaTime);
+        yield return new WaitForSecondsRealtime(duration - Time.deltaTime);
     }
     ////////
 
@@ -102,7 +101,7 @@ public class UIDynamicElements : MonoBehaviour
     {
         targetNameTextComponent.text = superText;
     }
-    public void TargetNameTextChange(string targetName) 
+    public void TargetNameTextChange(string targetName)
     {
         targetNameTextComponent.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = targetName;
     }
@@ -135,7 +134,7 @@ public class UIDynamicElements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void StopTimer()
