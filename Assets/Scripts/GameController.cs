@@ -102,7 +102,6 @@ public class GameController : MonoBehaviour
             {
                 //Correct answer
                 score += targetCurrentValue;
-                inGameTargetList.Add(targetFound);
                 GenerateNextTarget();
             }
             else
@@ -130,9 +129,9 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            int randomPosition = Random.Range(0, presetTargetList.Count);
-            targetToFind = presetTargetList[randomPosition];
-            presetTargetList.RemoveAt(randomPosition);
+            int randomPosition = Random.Range(0, inGameTargetList.Count);
+            targetToFind = inGameTargetList[randomPosition];
+            inGameTargetList.RemoveAt(randomPosition);
         }
     }
 

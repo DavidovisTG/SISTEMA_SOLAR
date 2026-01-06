@@ -1943,13 +1943,13 @@ struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAction_2__ctor_m7445B0F04ECB8542147C3C9B963A792140CFAD0A_gshared (UnityAction_2_tF47D82C7E3C3B118B409866D926435B55A0675BD* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponentInChildren_TisRuntimeObject_mE483A27E876DE8E4E6901D6814837F81D7C42F65_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___0_index, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_RemoveAt_m54F62297ADEE4D4FDA697F49ED807BF901201B54_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___0_index, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_AddRange_m1F76B300133150E6046C5FED00E88B5DE0A02E17_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_collection, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_2__ctor_m44A037CE8D00B19CF27C3155BB489C9A82F08D00_gshared (Action_2_t6E267C40DBCE33187D9AAAD4FFFB2BAE8A6B220E* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
@@ -1986,10 +1986,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIDynamicElements_LivesNumberTextChange_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m967AECC237535C552A97A80C7875E31B98496CA9 (int32_t* __this, String_t* ___0_format, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIDynamicElements_ScoreNumberTextChange_m2C5AE44234FB0AD52764B5C489D583658DE08E22 (UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* __this, String_t* ___0_scoreText, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_Equals_mCD5F35DEDCAFE51ACD4E033726FC2EF8DF7E9B4D (String_t* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-inline void List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, String_t* ___0_item, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, String_t*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___0_item, method);
-}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_GenerateNextTarget_m94E467D3ACBC4C64C1CDB83ADE1327BBE5654BAD (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_GameOverByLives_m0441B45F451728A183C13A597517F1C2FD70B5AE (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_UpdateUI_mF3C532BD217B7CDDB55F2C61C032A1306B38ECDA (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, const RuntimeMethod* method) ;
@@ -2037,6 +2033,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_GameOverByTime_mEF115D7BB
 inline void List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, const RuntimeMethod* method)
 {
 	((  void (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+}
+inline void List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, String_t* ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, String_t*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___0_item, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
@@ -2118,11 +2118,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Color_op_Implicit_m9B3228DAFA8DC57A75DE00CBBF13ED4F1E7B01FF_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_c, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector4_op_Equality_mCEA0E5F229F4AE8C55152F7A8F84345F24F52DC6_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___0_lhs, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___1_rhs, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB (RuntimeArray* ___0_array, int32_t ___1_index, int32_t ___2_length, const RuntimeMethod* method) ;
 inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method)
 {
 	((  void (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, RuntimeObject*, const RuntimeMethod*))List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared)(__this, ___0_item, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB (RuntimeArray* ___0_array, int32_t ___1_index, int32_t ___2_length, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector4__ctor_m96B2CD8B862B271F513AF0BDC2EABD58E4DBC813_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3* __this, float ___0_x, float ___1_y, float ___2_z, float ___3_w, const RuntimeMethod* method) ;
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -2411,18 +2411,12 @@ IL_0058:
 // Method Definition Index: 112174
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_OnImageTargetFound_m6710F165679E1A901B0C9A2201FE182163E0BA4B (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, String_t* ___0_targetFound, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	{
 		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:99>
 		bool L_0 = __this->___gameOver;
 		if (L_0)
 		{
-			goto IL_005a;
+			goto IL_004e;
 		}
 	}
 	{
@@ -2434,7 +2428,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_OnImageTargetFound_m6710F
 		L_3 = String_Equals_mCD5F35DEDCAFE51ACD4E033726FC2EF8DF7E9B4D(L_1, L_2, NULL);
 		if (!L_3)
 		{
-			goto IL_003d;
+			goto IL_0031;
 		}
 	}
 	{
@@ -2443,37 +2437,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_OnImageTargetFound_m6710F
 		int32_t L_5 = __this->___targetCurrentValue;
 		__this->___score = ((int32_t)il2cpp_codegen_add(L_4, L_5));
 		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:105>
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_6 = __this->___inGameTargetList;
-		String_t* L_7 = ___0_targetFound;
-		NullCheck(L_6);
-		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_6, L_7, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:106>
 		GameController_GenerateNextTarget_m94E467D3ACBC4C64C1CDB83ADE1327BBE5654BAD(__this, NULL);
-		goto IL_005a;
+		goto IL_004e;
 	}
 
-IL_003d:
+IL_0031:
 	{
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:110>
+		int32_t L_6 = __this->___lives;
+		__this->___lives = ((int32_t)il2cpp_codegen_subtract(L_6, 1));
 		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:111>
-		int32_t L_8 = __this->___lives;
-		__this->___lives = ((int32_t)il2cpp_codegen_subtract(L_8, 1));
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:112>
-		int32_t L_9 = __this->___lives;
-		if ((((int32_t)L_9) > ((int32_t)0)))
+		int32_t L_7 = __this->___lives;
+		if ((((int32_t)L_7) > ((int32_t)0)))
 		{
-			goto IL_005a;
+			goto IL_004e;
 		}
 	}
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:114>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:113>
 		GameController_GameOverByLives_m0441B45F451728A183C13A597517F1C2FD70B5AE(__this, NULL);
 	}
 
-IL_005a:
+IL_004e:
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:119>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:118>
 		GameController_UpdateUI_mF3C532BD217B7CDDB55F2C61C032A1306B38ECDA(__this, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:120>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:119>
 		return;
 	}
 }
@@ -2490,10 +2479,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_GenerateNextTarget_m94E46
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:124>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:123>
 		int32_t L_0 = __this->___targetDefaultValue;
 		__this->___targetCurrentValue = L_0;
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:126>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:125>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_1 = __this->___inGameTargetList;
 		NullCheck(L_1);
 		int32_t L_2;
@@ -2504,35 +2493,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_GenerateNextTarget_m94E46
 		}
 	}
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:129>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:128>
 		GameController_WinSequence_m33FD4BDA98A5F3911DDBDCA1CB4041AF895B939D(__this, NULL);
 		return;
 	}
 
 IL_0021:
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:133>
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_3 = __this->___presetTargetList;
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:132>
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_3 = __this->___inGameTargetList;
 		NullCheck(L_3);
 		int32_t L_4;
 		L_4 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_3, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
 		int32_t L_5;
 		L_5 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(0, L_4, NULL);
 		V_0 = L_5;
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:134>
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_6 = __this->___presetTargetList;
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:133>
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_6 = __this->___inGameTargetList;
 		int32_t L_7 = V_0;
 		NullCheck(L_6);
 		String_t* L_8;
 		L_8 = List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8(L_6, L_7, List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var);
 		__this->___targetToFind = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___targetToFind), (void*)L_8);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:135>
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_9 = __this->___presetTargetList;
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:134>
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_9 = __this->___inGameTargetList;
 		int32_t L_10 = V_0;
 		NullCheck(L_9);
 		List_1_RemoveAt_m031D3A21689276A872FCA7566C8F2F79F9581F0D(L_9, L_10, List_1_RemoveAt_m031D3A21689276A872FCA7566C8F2F79F9581F0D_RuntimeMethod_var);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:137>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:136>
 		return;
 	}
 }
@@ -2547,25 +2536,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_GameOverByLives_m0441B45F
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:141>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:140>
 		__this->___gameOver = (bool)1;
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:142>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:141>
 		Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* L_0 = __this->___timer;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
 		NullCheck(L_0);
 		Timer_Stop_mBC4B3380D5E5597C7224F7316C282BDD002A64BC(L_0, L_1, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:143>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:142>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_2 = __this->___uiElements;
 		NullCheck(L_2);
 		UIDynamicElements_TargetSupertextChange_m19B4F88B863A92A8F9EF1A124B9CFC3D13695FEF(L_2, _stringLiteral447D2958C33DC138E14FCC0E8CDF336A2A374624, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:144>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:143>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_3 = __this->___uiElements;
 		NullCheck(L_3);
 		UIDynamicElements_TargetNameTextChange_mE53526BF0CF470283E3C99F9E1329A49BDDB0681(L_3, _stringLiteral6683ECB08161EAA3856C6E30692665BCF4E94A9A, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:145>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:144>
 		GameController_GenerateFinalScore_m1015499F5ACADB5E82193FA99AB7DB86B7334113(__this, (bool)0, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:146>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:145>
 		return;
 	}
 }
@@ -2580,25 +2569,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_GameOverByTime_mEF115D7BB
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:150>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:149>
 		__this->___gameOver = (bool)1;
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:151>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:150>
 		Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* L_0 = __this->___timer;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
 		NullCheck(L_0);
 		Timer_Stop_mBC4B3380D5E5597C7224F7316C282BDD002A64BC(L_0, L_1, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:152>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:151>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_2 = __this->___uiElements;
 		NullCheck(L_2);
 		UIDynamicElements_TargetSupertextChange_m19B4F88B863A92A8F9EF1A124B9CFC3D13695FEF(L_2, _stringLiteral84B0814B58EA4C58F00A6004A31138C2FF119975, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:153>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:152>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_3 = __this->___uiElements;
 		NullCheck(L_3);
 		UIDynamicElements_TargetNameTextChange_mE53526BF0CF470283E3C99F9E1329A49BDDB0681(L_3, _stringLiteral6683ECB08161EAA3856C6E30692665BCF4E94A9A, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:154>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:153>
 		GameController_GenerateFinalScore_m1015499F5ACADB5E82193FA99AB7DB86B7334113(__this, (bool)0, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:155>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:154>
 		return;
 	}
 }
@@ -2613,29 +2602,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_WinSequence_m33FD4BDA98A5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:159>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:158>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_0 = __this->___uiElements;
 		NullCheck(L_0);
 		UIDynamicElements_DynamicBoxVisible_mEC4EC3B0B0CFBF20EC5825B585D3C9C9BBA32EB9(L_0, (bool)1, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:160>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:159>
 		__this->___gameOver = (bool)1;
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:161>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:160>
 		Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* L_1 = __this->___timer;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2;
 		L_2 = Color_get_green_mEB001F2CD8C68C6BBAEF9101990B779D3AA2A6EF_inline(NULL);
 		NullCheck(L_1);
 		Timer_Stop_mBC4B3380D5E5597C7224F7316C282BDD002A64BC(L_1, L_2, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:162>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:161>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_3 = __this->___uiElements;
 		NullCheck(L_3);
 		UIDynamicElements_TargetSupertextChange_m19B4F88B863A92A8F9EF1A124B9CFC3D13695FEF(L_3, _stringLiteral9E40AC1DCEC64539016F05F921D1037787ACEFB7, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:163>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:162>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_4 = __this->___uiElements;
 		NullCheck(L_4);
 		UIDynamicElements_TargetNameTextChange_mE53526BF0CF470283E3C99F9E1329A49BDDB0681(L_4, _stringLiteral6683ECB08161EAA3856C6E30692665BCF4E94A9A, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:164>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:163>
 		GameController_GenerateFinalScore_m1015499F5ACADB5E82193FA99AB7DB86B7334113(__this, (bool)1, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:165>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:164>
 		return;
 	}
 }
@@ -2650,36 +2639,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_ResetEverything_m3662DA61
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:169>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:168>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_0 = __this->___uiElements;
 		NullCheck(L_0);
 		UIDynamicElements_AllUIVisible_m74168598BDBAECF2E342CCF148625CC8016F82AE(L_0, (bool)0, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:170>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:169>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_1 = __this->___uiElements;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2;
 		memset((&L_2), 0, sizeof(L_2));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_2), (0.0f), (0.0f), (0.0f), (0.0f), NULL);
 		NullCheck(L_1);
 		UIDynamicElements_SetDynBoxBGColor_mB970B431630B05A30AD403930B4857908A5FDE21(L_1, L_2, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:171>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:170>
 		Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* L_3 = __this->___timer;
 		float L_4 = __this->___timerTimeInSeconds;
 		NullCheck(L_3);
 		Timer_SetSeconds_m7018016B8858AE1F7A7C9FB906329D015FA2AF97_inline(L_3, L_4, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:172>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:171>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_5 = __this->___inGameTargetList;
 		NullCheck(L_5);
 		List_1_Clear_mC6C7AEBB0F980A717A87C0D12377984A464F0934_inline(L_5, List_1_Clear_mC6C7AEBB0F980A717A87C0D12377984A464F0934_RuntimeMethod_var);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:173>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:172>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_6 = __this->___inGameTargetList;
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_7 = __this->___presetTargetList;
 		NullCheck(L_6);
 		List_1_AddRange_m157DD7AD4D25423F82A21E533BC4686C83770D5E(L_6, L_7, List_1_AddRange_m157DD7AD4D25423F82A21E533BC4686C83770D5E_RuntimeMethod_var);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:174>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:173>
 		__this->___lives = 3;
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:175>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:174>
 		__this->___score = 0;
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:176>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:175>
 		return;
 	}
 }
@@ -2706,18 +2695,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_GenerateFinalScore_m10154
 	int32_t V_2 = 0;
 	float V_3 = 0.0f;
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:180>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:179>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_0 = __this->___uiElements;
 		NullCheck(L_0);
 		UIDynamicElements_DynamicBoxVisible_mEC4EC3B0B0CFBF20EC5825B585D3C9C9BBA32EB9(L_0, (bool)1, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:181>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:180>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_1 = __this->___uiElements;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2;
 		memset((&L_2), 0, sizeof(L_2));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_2), (0.0f), (0.0f), (0.0f), (0.392156869f), NULL);
 		NullCheck(L_1);
 		UIDynamicElements_SetDynBoxBGColor_mB970B431630B05A30AD403930B4857908A5FDE21(L_1, L_2, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:182>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:181>
 		bool L_3 = ___0_win;
 		if (!L_3)
 		{
@@ -2725,10 +2714,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_GenerateFinalScore_m10154
 		}
 	}
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:184>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:183>
 		int32_t L_4 = __this->___lives;
 		V_0 = ((int32_t)il2cpp_codegen_multiply(L_4, ((int32_t)250)));
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:185>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:184>
 		Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* L_5 = __this->___timer;
 		NullCheck(L_5);
 		float L_6;
@@ -2736,17 +2725,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_GenerateFinalScore_m10154
 		int32_t L_7;
 		L_7 = Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline(((float)il2cpp_codegen_multiply(L_6, (50.0f))), NULL);
 		V_1 = L_7;
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:186>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:185>
 		int32_t L_8 = __this->___score;
 		int32_t L_9 = V_0;
 		int32_t L_10 = V_1;
 		V_2 = ((int32_t)il2cpp_codegen_add(((int32_t)il2cpp_codegen_add(L_8, L_9)), L_10));
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:186>
 		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:187>
 		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:188>
 		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:189>
 		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:190>
 		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:191>
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:192>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_11 = __this->___uiElements;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_12 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)((int32_t)12));
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_13 = L_12;
@@ -2816,11 +2805,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_GenerateFinalScore_m10154
 
 IL_010c:
 	{
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:194>
 		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:195>
 		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:196>
 		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:197>
 		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:198>
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:199>
 		UIDynamicElements_t15C3C48FC1FDB374C7C88A11CA36742362D56D31* L_37 = __this->___uiElements;
 		int32_t* L_38 = (int32_t*)(&__this->___score);
 		String_t* L_39;
@@ -2832,7 +2821,7 @@ IL_010c:
 		L_42 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(_stringLiteral5636C7939F7D1344A831794DAE820966F3B4B9D5, L_39, _stringLiteral2DFFDAF1FE71B90BCD80E63E7A5F837525C01FE9, L_41, NULL);
 		NullCheck(L_37);
 		UIDynamicElements_DynamicTextChange_mF2EB858D5047C1E996CD224AA5FC39F0469BFA0A(L_37, ((int32_t)65), L_42, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:201>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:200>
 		return;
 	}
 }
@@ -2847,10 +2836,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_ReturnToMainMenu_m871DBD0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:205>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:204>
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteral028FACF80E052870874038642F78B9BF75689F99, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:206>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:205>
 		return;
 	}
 }
@@ -2858,9 +2847,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_ReturnToMainMenu_m871DBD0
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_TimerEnded_mCD0C6D2CCFF5E3A3F6BF3EF67D6B923E2D6964C1 (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:210>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:209>
 		GameController_GameOverByTime_mEF115D7BB3618E55894C9B5AC60F83E10561875B(__this, NULL);
-		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:211>
+		//<source_info:D:/VIDEOGAMESUNITY BACKUP/SISTEMA_SOLAR/Assets/Scripts/GameController.cs:210>
 		return;
 	}
 }
@@ -5362,44 +5351,6 @@ IL_0010:
 		return L_5;
 	}
 }
-// Method Definition Index: 11368
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
-{
-	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
-	int32_t V_1 = 0;
-	{
-		int32_t L_0 = __this->____version;
-		__this->____version = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = __this->____items;
-		V_0 = L_1;
-		int32_t L_2 = __this->____size;
-		V_1 = L_2;
-		int32_t L_3 = V_1;
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = V_0;
-		NullCheck(L_4);
-		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
-		{
-			goto IL_0034;
-		}
-	}
-	{
-		int32_t L_5 = V_1;
-		__this->____size = ((int32_t)il2cpp_codegen_add(L_5, 1));
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = V_0;
-		int32_t L_7 = V_1;
-		RuntimeObject* L_8 = ___0_item;
-		NullCheck(L_6);
-		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (RuntimeObject*)L_8);
-		return;
-	}
-
-IL_0034:
-	{
-		RuntimeObject* L_9 = ___0_item;
-		List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 14));
-		return;
-	}
-}
 // Method Definition Index: 11357
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
@@ -5435,6 +5386,44 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m16C1F2C61FED59
 
 IL_003c:
 	{
+		return;
+	}
+}
+// Method Definition Index: 11368
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
+{
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
+	int32_t V_1 = 0;
+	{
+		int32_t L_0 = __this->____version;
+		__this->____version = ((int32_t)il2cpp_codegen_add(L_0, 1));
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = __this->____items;
+		V_0 = L_1;
+		int32_t L_2 = __this->____size;
+		V_1 = L_2;
+		int32_t L_3 = V_1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = V_0;
+		NullCheck(L_4);
+		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		int32_t L_5 = V_1;
+		__this->____size = ((int32_t)il2cpp_codegen_add(L_5, 1));
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = V_0;
+		int32_t L_7 = V_1;
+		RuntimeObject* L_8 = ___0_item;
+		NullCheck(L_6);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (RuntimeObject*)L_8);
+		return;
+	}
+
+IL_0034:
+	{
+		RuntimeObject* L_9 = ___0_item;
+		List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 14));
 		return;
 	}
 }
