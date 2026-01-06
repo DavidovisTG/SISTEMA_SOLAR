@@ -7,11 +7,11 @@ public class UIDynamicElements : MonoBehaviour
 {
     private GameObject UIPanel;
 
-    [SerializeField] TextMeshProUGUI livesTextComponent;
-    [SerializeField] TextMeshProUGUI targetNameTextComponent;
-    [SerializeField] TextMeshProUGUI scoreTextComponent;
-    [SerializeField] Button backToMenuButtonComponent;
-    [SerializeField] Timer timer;
+    [SerializeField] TextMeshProUGUI livesCounter;
+    [SerializeField] TextMeshProUGUI targetSuperiorText;
+    [SerializeField] TextMeshProUGUI targetNameText;
+    [SerializeField] TextMeshProUGUI scoreCounter;
+    [SerializeField] TextMeshProUGUI timerText;
 
     [SerializeField] GameObject dynamicUIBox;
 
@@ -29,7 +29,7 @@ public class UIDynamicElements : MonoBehaviour
     }
 
     ////////UI ANIMATION
-    public IEnumerator startAnimation()
+    public IEnumerator StartAnimation()
     {
         dynamicUIBox.SetActive(true);
         yield return StartCoroutine(StartCountdown(3));
@@ -49,8 +49,7 @@ public class UIDynamicElements : MonoBehaviour
         TMPUI.text = "¡Ya!";
         TR.sizeDelta = new Vector2(TR.sizeDelta.x, initialDynamicUIBoxHeight);
 
-        StartCoroutine(DelayedTextHide(TMPUI, 0.7F));
-        timer.Run();
+        StartCoroutine(DelayedTextHide(0.7F));
     }
 
 
@@ -85,31 +84,42 @@ public class UIDynamicElements : MonoBehaviour
     }
     ////////
 
-    private IEnumerator DelayedTextHide(TextMeshProUGUI tMPUI, float seconds)
+    private IEnumerator DelayedTextHide(float seconds)
     {
         yield return new WaitForSecondsRealtime(seconds);
-        tMPUI.gameObject.SetActive(false);
+        dynamicUIBox.SetActive(false);
     }
 
 
 
     public void LivesNumberTextChange(string text)
     {
-        livesTextComponent.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = text;
+        livesCounter.text = text;
     }
     public void TargetSupertextChange(string superText)
     {
-        targetNameTextComponent.text = superText;
+        targetSuperiorText.text = superText;
     }
     public void TargetNameTextChange(string targetName)
     {
-        targetNameTextComponent.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = targetName;
+        targetNameText.text = targetName;
     }
     public void ScoreNumberTextChange(string scoreText)
     {
-        scoreTextComponent.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = scoreText;
+        scoreCounter.text = scoreText;
     }
 
+    public void DynamicTextChange(int fontSize, string text)
+    {
+        RectTransform TR = dynamicUIBox.GetComponent<RectTransform>();
+        TextMeshProUGUI TMPUI = dynamicUIBox.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        if (TMPUI == null) Debug.LogError("ASJDFLKANFKLQNWRF");
+
+        TR.sizeDelta = new Vector2(TR.sizeDelta.x, initialDynamicUIBoxHeight*2);
+        TMPUI.fontSize = fontSize;
+        TMPUI.text = text;
+        TMPUI.alignment = TextAlignmentOptions.Center;
+    }
 
 
     public void AllUIVisible(bool visible)
@@ -119,11 +129,26 @@ public class UIDynamicElements : MonoBehaviour
             UIPanel.transform.GetChild(c).gameObject.SetActive(visible);
         }
     }
-
-
-    internal void SetTimer(float timerTimeInSeconds)
+    public void LivesVisible(bool visible)
     {
-        timer.SetSeconds(timerTimeInSeconds);
+        livesCounter.GetComponentInParent<GameObject>().SetActive(visible);
+    }
+    public void ScoreVisible(bool visible)
+    {
+        scoreCounter.GetComponentInParent<GameObject>().SetActive(visible);
+    }
+    public void TargetVisible(bool visible)
+    {
+        targetNameText.GetComponentInParent<GameObject>().SetActive(visible);
+    }
+    public void DynamicBoxVisible(bool visible)
+    {
+        dynamicUIBox.SetActive(visible);
+    }
+
+    public void SetDynBoxBGColor(Color color)
+    {
+        dynamicUIBox.GetComponent<Image>().color = color;
     }
 
     public void BackToMainMenu()
@@ -131,18 +156,11 @@ public class UIDynamicElements : MonoBehaviour
         GameController.Instance.ReturnToMainMenu();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
 
-    }
+    //}
 
-    public void StopTimer()
-    {
-        timer.Stop();
-    }
-    public void RunTimer()
-    {
-        timer.Run();
-    }
+
 }

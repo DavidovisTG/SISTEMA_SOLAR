@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Globalization;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Timer : MonoBehaviour
@@ -29,7 +30,7 @@ public class Timer : MonoBehaviour
         timerText.color = Color.white;
         running = true;
     }
-    public void Stop()
+    public void Pause()
     {
         if (textAnimation != null)
         {
@@ -37,6 +38,17 @@ public class Timer : MonoBehaviour
             textAnimation = null;
         }
         running = false;
+    }
+    public void Stop(Color color = default)
+    {
+        Pause();
+        active = false;
+        if (color == default) timerText.color = Color.white;
+        else timerText.color = color;
+    }
+    public void SetActive(bool active)
+    {
+        this.active = active;
     }
 
     public void SetSeconds(float seconds)
@@ -54,10 +66,12 @@ public class Timer : MonoBehaviour
 
             if (timeInSeconds <= 0)
             {
-                Stop();
-                timeInSeconds = 0;
-                timerText.color = Color.red;
-                if (active) GameController.Instance.TimerEnded();
+                if (active)
+                {
+                    timeInSeconds = 0;
+                    GameController.Instance.TimerEnded();
+                }
+                Stop(Color.red);
             }
 
             timerText.text = timeInSeconds.ToString("00.00", CultureInfo.InvariantCulture);
@@ -73,6 +87,16 @@ public class Timer : MonoBehaviour
         }
         else
         {
+            if (active && timeInSeconds <= 0)
+            {
+                Stop(Color.red);
+                timeInSeconds = 0;
+                if (active)
+                {
+                    GameController.Instance.TimerEnded();
+                    active = false;
+                }
+            }
             if (textAnimation != null)
             {
                 StopCoroutine(textAnimation);
@@ -87,17 +111,16 @@ public class Timer : MonoBehaviour
         while (true)
         {
             timerText.color = Color.red;
-            yield return new WaitForSecondsRealtime(0.05F);
+            yield return new WaitForSecondsRealtime(0.05F - Time.deltaTime);
             timerText.color = Color.white;
 
-            yield return new WaitForSecondsRealtime(wait - 0.05F - Time.deltaTime);
+            yield return new WaitForSecondsRealtime(wait - 0.05F);
         }
     }
 
-    private IEnumerator TimerTextColorPing(Color pingColor)
+    public float GetTimeLeft()
     {
-        timerText.color = pingColor;
-        yield return new WaitForSecondsRealtime(0.05F);
-        timerText.color = Color.white;
+        return timeInSeconds;
     }
+
 }
